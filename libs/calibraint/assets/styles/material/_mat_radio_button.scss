@@ -1,0 +1,39 @@
+@import "../settings/colors";
+
+/* Material Radio Button style overwrite here */
+
+.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
+  border-color: $blue;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: $green;
+}
+
+.mat-radio-button.mat-warn.mat-radio-checked .mat-radio-outer-circle {
+  border-color: $warn-color;
+}
+
+.mat-radio-button.mat-primary .mat-radio-inner-circle {
+  background-color: $blue;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: $green;
+}
+
+.mat-radio-button.mat-warn .mat-radio-inner-circle {
+  background-color: $warn-color;
+}
+
+.mat-radio-button.mat-primary .mat-ripple-element {
+  background-color: rgba($blue, .5) !important;
+}
+
+.mat-radio-button.mat-accent .mat-ripple-element {
+  background-color: rgba($green, .5) !important;
+}
+
+.mat-radio-button.mat-warn .mat-ripple-element {
+  background-color: rgba($warn-color, .5) !important;
+}

@@ -1,0 +1,16 @@
+@import "../settings/colors";
+
+/* Material Date Picker style overwrite here */
+
+.mat-form-field-suffix .mat-datepicker-toggle .mat-button-focus-overlay, .mat-form-field-suffix .mat-datepicker-toggle .mat-button-ripple {
+  margin-left: 0;
+}
+
+.mat-datepicker-toggle-active {
+  color: $text-grey-secondary;
+}
+
+.mat-calendar-body-selected {
+  background-color: $text-grey-hint;
+  color: $text-white-primary;
+}

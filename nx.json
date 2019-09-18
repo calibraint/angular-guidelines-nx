@@ -13,6 +13,18 @@
     },
     "client": {
       "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "admin-e2e": {
+      "tags": []
+    },
+    "admin": {
+      "tags": []
+    },
+    "calibraint": {
+      "tags": []
     }
   }
 }

@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Mixins
+    - Border Radius Properties here
+   ========================================================================== */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* ==========================================================================
+   Mixins
+    - Box Shadow Properties here
+   ========================================================================== */
+
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  -ms-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+}
+
+/* ==========================================================================
+   Mixins
+    - Transition Properties here
+   ========================================================================== */
+
+@mixin transition($sec) {
+  -webkit-transition: all $sec;
+  -moz-transition: all $sec;
+  -ms-transition: all $sec;
+  -o-transition: all $sec;
+  transition: all $sec;
+}
+
+@mixin transition-ease($animation) {
+  -webkit-transition: all $animation;
+  -moz-transition: all $animation;
+  -ms-transition: all $animation;
+  -o-transition: all $animation;
+  transition: all $animation;
+}
+
+/* ==========================================================================
+   Mixins
+    - Animation Delay Properties here
+   ========================================================================== */
+
+@mixin animateDelay($sec) {
+  -webkit-animation-delay: $sec;
+  -moz-animation-delay: $sec;
+  -ms-animation-delay: $sec;
+  -o-animation-delay: $sec;
+  animation-delay: $sec;
+}
+
+/* ==========================================================================
+   Mixins
+    - Positioning Properties here
+   ========================================================================== */
+
+@mixin position($value) {
+  top: $value;
+  right: $value;
+  bottom: $value;
+  left: $value;
+}
+
+@mixin positionTop($top, $right) {
+  top: $top;
+  right: $right;
+}
+
+@mixin positionBottom($bottom, $left) {
+  bottom: $bottom;
+  left: $left;
+}
+
+/* ==========================================================================
+   Mixins
+    - Rotate Properties here
+   ========================================================================== */
+
+@mixin rotate($deg) {
+  -ms-transform: rotate($deg); /* IE 9 */
+  -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
+  -moz-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+/* ==========================================================================
+   Mixins
+    - Font Properties here
+   ========================================================================== */
+
+@mixin font($size, $lineHeight, $weight, $color) {
+  font-size: $size;
+  line-height: $lineHeight;
+  font-weight: $weight;
+  color: $color;
+}
+
+/* ==========================================================================
+   Mixins
+    - Images Sizing Properties here
+   ========================================================================== */
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin sizing($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/* ==========================================================================
+   Mixins
+    - Icon Properties here
+   ========================================================================== */
+
+@mixin icon($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+/* ==========================================================================
+   Mixins
+    - Flex Box Properties here
+   ========================================================================== */
+
+@mixin flexCenter($display, $alignItem, $justifyContent) {
+  display: $display;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+}

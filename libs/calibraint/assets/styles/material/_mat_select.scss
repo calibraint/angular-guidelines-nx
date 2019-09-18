@@ -1,0 +1,144 @@
+@import "../settings/colors";
+@import "../settings/variables";
+
+/* Mat form field Select box style overwrite here */
+
+mat-form-field.mat-form-field-type-mat-select {
+  .mat-select {
+    border: 1px solid $grey-lighten-2;
+    border-radius: $global-border-radius;
+    line-height: 34px;
+    padding-left: $spacer16;
+    padding-right: $spacer8;
+    width: 100%;
+
+    .mat-select-arrow {
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      border-left: 0;
+      border-right: -2px;
+      border-top: 0;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    &.mat-select-invalid {
+      background: $red-lighten2;
+      border: 1px solid $red;
+
+      .mat-select-arrow {
+        border-color: $red;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  &.mat-form-field-invalid .mat-form-field-label {
+    color: $red !important;
+  }
+
+  // ERROR state when focused
+  &:focus, &.mat-focused {
+    .mat-select {
+      &.mat-select-invalid {
+        background: $text-white-primary;
+        border: 2px solid $red;
+
+        .mat-select-arrow {
+          border-color: $red;
+        }
+      }
+    }
+  }
+
+  .mat-select-arrow {
+    color: $text-grey-primary;
+  }
+
+  .mat-form-field-label {
+    color: $text-grey-primary !important;
+  }
+
+  &.mat-focused.mat-primary {
+    .mat-select-arrow, .mat-form-field-label {
+      color: $text-grey-primary;
+    }
+  }
+
+  // If mat form field is disabled
+  &.mat-form-field-disabled {
+    .mat-select {
+      border-color: transparent;
+      background-color: $grey-lighten-3;
+
+      .mat-select-arrow {
+        border: solid $text-grey-hint;
+        border-width: 0 2px 2px 0;
+        border-left: 0;
+        border-right: -2px;
+        border-top: 0;
+        padding: 3px;
+      }
+
+      &:hover {
+        cursor: not-allowed;
+      }
+
+      //Once select box was Disabled this style to be added into the utilities styles
+      //.mat-select-trigger {
+      //  cursor: not-allowed;
+      //}
+    }
+  }
+
+  &.single-border {
+    .mat-select {
+      border: none;
+      border-bottom: 1px solid $grey-lighten-2;
+      border-radius: 0;
+
+      &.mat-select-invalid {
+        background: $red-lighten2;
+        border: none;
+        border-bottom: 1px solid $red;
+      }
+    }
+
+    // ERROR state when focused
+    &:focus, &.mat-focused {
+      .mat-select {
+        &.mat-select-invalid {
+          background: $text-white-primary;
+          border: none;
+          border-bottom: 2px solid $red;
+        }
+      }
+    }
+  }
+
+  &.transparent-form {
+    .mat-select {
+      border: none;
+      border-radius: 0;
+
+      &.mat-select-invalid {
+        background: $red-lighten2;
+        border: none;
+      }
+    }
+
+    // ERROR state when focused
+    &:focus, &.mat-focused {
+      .mat-select {
+        &.mat-select-invalid {
+          background: $text-white-primary;
+          border: none;
+        }
+      }
+    }
+  }
+}

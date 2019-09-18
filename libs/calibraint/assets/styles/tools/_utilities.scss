@@ -1,0 +1,87 @@
+@import "../settings/colors";
+@import "../settings/variables";
+@import "mixins";
+
+/* ==========================================================================
+   Tools
+    - Globally-available tools, public utilities
+   ========================================================================== */
+
+body {
+  background: $background-color;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Flex basis styles here */
+.flex-1 {
+  flex: 1;
+}
+
+/* Heading and sub heading styles here */
+h3 {
+  &.heading {
+    @include font(20px, 24px, 600, $text-grey-primary);
+    letter-spacing: 0.3px;
+  }
+}
+
+h4 {
+  &.heading {
+    @include font(16px, 20px, 600, $text-grey-secondary);
+    letter-spacing: 0.2px;
+  }
+}
+
+p {
+  &.subtitle {
+    @include font(14px, 20px, normal, $text-grey-hint);
+  }
+
+  &.summary {
+    @include font(13px, 16px, normal, $text-grey-hint);
+    letter-spacing: 0.2px;
+  }
+}
+
+/* Cursor styles here */
+.cursor {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/* Material icons styles overwrite here */
+label {
+  @include font(14px, 16px, 500, $text-grey-primary);
+  display: block;
+  margin: 0 0 8px 0;
+}
+
+/* Input group style here */
+.input-grouped {
+  .mat-form-field {
+    .mat-select {
+      background-color: $grey-lighten-3;
+      border-radius: 2px 0 0 2px;
+    }
+    .mat-form-field-flex {
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

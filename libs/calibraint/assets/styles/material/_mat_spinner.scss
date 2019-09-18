@@ -1,0 +1,15 @@
+@import "../settings/colors";
+
+/* Material Loader style overwrite here */
+
+.mat-progress-spinner.mat-primary circle, .mat-spinner.mat-primary circle {
+  stroke: $blue;
+}
+
+.mat-progress-spinner.mat-accent circle, .mat-spinner.mat-accent circle {
+  stroke: $green;
+}
+
+.mat-progress-spinner.mat-warn circle, .mat-spinner.mat-warn circle {
+  stroke: $warn-color;
+}

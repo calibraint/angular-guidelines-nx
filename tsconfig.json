@@ -15,7 +15,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@angular-guidelines-nx/core": ["libs/core/src/index.ts"],
+      "@angular-guidelines-nx/calibraint": ["libs/calibraint/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

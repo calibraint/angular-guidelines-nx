@@ -1,0 +1,8 @@
+@import "settings/colors";
+@import "settings/variables";
+
+.header {
+    box-shadow: $box-shadow1;
+    background-color: $text-white-primary;
+    padding: $spacer16;
+}

@@ -1,0 +1,81 @@
+@import "../settings/colors";
+@import "../settings/variables";
+
+/* Mat form field style overwrite here */
+
+mat-form-field.mat-form-field {
+  background: $text-white-primary;
+  font-size: 14px;
+  margin-bottom: $spacer16;
+  position: relative;
+
+  .mat-form-field-label, .mat-focused .mat-form-field-label {
+    color: $text-grey-hint !important;
+  }
+
+  &.mat-form-field-disabled .mat-form-field-label, &.mat-form-field-disabled.mat-focused .mat-form-field-label {
+    color: $text-grey-hint !important;
+  }
+
+  &.full-width {
+    width: 100%;
+
+    .mat-form-field-infix {
+      width: 100%;
+    }
+  }
+
+  &.no-border {
+    .mat-form-field-prefix {
+      padding-left: 0;
+    }
+
+    .mat-form-field-flex {
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .mat-form-field-prefix, .mat-form-field-suffix {
+    color: $text-grey-secondary;
+  }
+
+  .mat-form-field-infix {
+    border: 0;
+    padding: 0;
+  }
+
+  //mat form field placeholder style overwrite here
+  .mat-form-field-label {
+    line-height: 34px;
+    padding-left: $spacer16;
+    top: 0.84375em;
+
+    .mat-placeholder-required {
+      display: none;
+    }
+  }
+
+  //mat form field underline style overwrite here
+  .mat-form-field-underline {
+    bottom: 0;
+    opacity: 0 !important;
+    z-index: -1;
+  }
+
+
+  .mat-floating-placeholder {
+    opacity: 0 !important;
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  //Textarea Placeholder style overwrite here
+  &.textarea {
+    .mat-form-field-label {
+      padding-left: $spacer8;
+    }
+  }
+}

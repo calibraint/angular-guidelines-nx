@@ -1,0 +1,217 @@
+@import "../settings/colors";
+
+/* Material Button style overwrite here */
+button:disabled:hover {
+  cursor: not-allowed;
+}
+
+button.mat-button,
+a.mat-button {
+  transition: all .3s;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $grey-lighten-2;
+
+    .mat-button-focus-overlay,
+    .mat-button-ripple {
+      opacity: 0 !important;
+    }
+  }
+
+  // Button colors
+  &.mat-primary {
+    color: $blue;
+
+    &:hover {
+      background-color: rgba($blue, .04);
+    }
+  }
+  &.mat-accent {
+    color: $green;
+
+    &:hover {
+      background-color: rgba($green, .04);
+    }
+  }
+  &.mat-warn {
+    color: $warn-color;
+
+    &:hover {
+      background-color: rgba($warn-color, .04);
+    }
+  }
+}
+
+button.mat-raised-button,
+a.mat-raised-button {
+  background-color: $text-white-primary;
+  color: $text-grey-primary;
+  transition: all .3s;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &:hover {
+    .mat-button-focus-overlay,
+    .mat-button-ripple {
+      opacity: 0 !important;
+    }
+  }
+
+  // Button colors
+  &.mat-primary {
+    background-color: $blue;
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+
+  &.mat-accent {
+    background-color: $green;
+    color: $text-white-primary;
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+
+  &.mat-warn {
+    background-color: $warn-color;
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+}
+
+button.mat-stroked-button,
+a.mat-stroked-button {
+  background-color: $text-white-primary;
+  color: $text-grey-primary;
+  transition: all .3s;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: rgba($text-grey-primary, .04);
+
+    .mat-button-focus-overlay,
+    .mat-button-ripple {
+      opacity: 0 !important;
+    }
+  }
+
+  // Button colors
+  &.mat-primary {
+    border-color: $blue;
+    color: $blue;
+
+    &:hover {
+      background-color: rgba($blue, .04);
+  
+      .mat-button-focus-overlay,
+      .mat-button-ripple {
+        opacity: 0 !important;
+      }
+    }
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+
+  &.mat-accent {
+    border-color: $green;
+    color: $green;
+
+    &:hover {
+      background-color: rgba($green, .04);
+  
+      .mat-button-focus-overlay,
+      .mat-button-ripple {
+        opacity: 0 !important;
+      }
+    }
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+
+  &.mat-warn {
+    border-color: $warn-color;
+    color: $warn-color;
+
+    &:hover {
+      background-color: rgba($warn-color, .04);
+  
+      .mat-button-focus-overlay,
+      .mat-button-ripple {
+        opacity: 0 !important;
+      }
+    }
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+}
+
+
+button.mat-flat-button,
+a.mat-flat-button {
+  background-color: $text-white-primary;
+  color: $text-grey-primary;
+  transition: all .3s;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &:hover {
+    .mat-button-focus-overlay,
+    .mat-button-ripple {
+      opacity: 0 !important;
+    }
+  }
+
+  // Button colors
+  &.mat-primary {
+    background-color: $blue;
+    color: $text-white-primary;
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+
+  &.mat-accent {
+    background-color: $green;
+    color: $text-white-primary;
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+
+  &.mat-warn {
+    background-color: $warn-color;
+    color: $text-white-primary;
+
+    &[disabled] {
+      background-color: $grey-lighten-3;
+    }
+  }
+}
+
+button:focus {
+  outline: 0!important;
+}

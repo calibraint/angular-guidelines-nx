@@ -1,0 +1,24 @@
+<h2 class="text-center" mat-dialog-title>Login</h2>
+
+<mat-dialog-content>
+    <div>
+      <label>Email</label>
+      <mat-form-field class="full-width" floatLabel="never">
+        <input matInput placeholder="Enter an Email">
+      </mat-form-field>
+    </div>
+    <div>
+      <label>Password</label>
+      <mat-form-field class="full-width" floatLabel="never">
+        <input matInput type="password" placeholder="Enter an Password">
+      </mat-form-field>
+    </div>
+    <div class="modal-popup-loader" *ngIf="loading">
+      <mat-spinner [diameter]=40 [strokeWidth]=4></mat-spinner>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button color="primary" (click)="login()">Login</button>
+</mat-dialog-actions>

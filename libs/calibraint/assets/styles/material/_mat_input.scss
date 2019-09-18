@@ -1,0 +1,223 @@
+@import "../settings/colors";
+@import "../settings/variables";
+
+/* Mat form field Input text box style overwrite here */
+
+mat-form-field.mat-form-field-type-mat-input {
+  input.mat-input-element {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    height: inherit;
+    line-height: 14px;
+    margin-top: 0;
+    vertical-align: middle;
+  }
+
+  .mat-form-field-flex {
+    align-items: center;
+    border: 1px solid $grey-lighten-2;
+    border-radius: $global-border-radius;
+  }
+
+  .mat-input-element {
+    padding: 9px $spacer8 9px $spacer16;
+  }
+
+  .mat-form-field-prefix {
+    // Padding, rather than margin, so we can set a background-color on this and fill the input.
+    padding-left: $spacer16;
+
+    mat-icon {
+      font-size: inherit;
+    }
+
+    // If there's a prefix, the input should have no padding-left because it gets 8px from the infix
+    +.mat-form-field-infix input {
+      padding-left: 0;
+    }
+  }
+
+  .mat-form-field-suffix {
+    margin-right: $spacer8;
+  }
+
+  .mat-form-field-prefix, .mat-form-field-suffix {
+    align-items: center;
+    display: flex; // So we can have multiple prefixes or suffixes
+
+    * + * {
+      margin-left: $spacer8; // 8px between them if there are multiple
+    }
+
+    mat-icon {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  // If there's a prefix, only apply 8px padding on the left
+  .mat-form-field-prefix + .mat-form-field-infix {
+    padding-left: $spacer8;
+
+    .mat-form-field-label {
+      padding-left: $spacer8;
+    }
+  }
+
+  // ERROR message and placement
+  .mat-form-field-subscript-wrapper {
+    bottom: 0;
+    margin-top: 0;
+    overflow: visible;
+    pointer-events: none;
+    top: 0;
+
+    .mat-error {
+      background-color: $red;
+      border-radius: $global-border-radius;
+      color: $text-white-primary;
+      display: none;
+      float: right;
+      font-size: 12px;
+      font-weight: 500;
+      overflow: visible;
+      padding: $spacer8 $spacer16;
+      position: relative;
+      right: 0;
+      top: -40px;
+      width: auto;
+
+      &::after { // The triangle!
+        bottom: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid $red;
+        content: ' ';
+        height: 0;
+        position: absolute;
+        right: 12px;
+        width: 0;
+      }
+
+      &.error-left {
+        top: 3px;
+        left: calc(-100% - 12px);
+
+        &::after {
+          bottom: unset;
+          right: -12px;
+          transform: rotateZ(-90deg);
+          top: 12px;
+        }
+
+      }
+    }
+
+    .mat-form-field-hint-wrapper {
+      bottom: 0;
+      padding-right: 2px;
+    }
+  }
+
+  // Show error(s) on hover and focus
+  &:hover, &:focus, &.mat-focused {
+    // Only show the first error
+    .mat-form-field-subscript-wrapper .mat-error:nth-of-type(1) {
+      display: block;
+    }
+  }
+
+  // Change error background and border on focus
+  &:focus, &.mat-focused {
+    .mat-form-field-flex {
+      border-color: $blue;
+      box-shadow: 0 0 0 1px $blue;
+    }
+
+    &.mat-form-field-invalid .mat-form-field-flex {
+      background-color: transparent;
+      box-shadow: 0 0 0 1px $red;
+    }
+  }
+
+  // ERROR state styling when not hovered or focused
+  &.mat-form-field-invalid .mat-form-field-flex {
+    background-color: $red-lighten2;
+    border-color: $red;
+
+    &::after {
+      color: $warn-color;
+      content: 'warning';
+      font-family: 'Material Icons';
+      font-feature-settings: 'liga';
+      font-size: 150%;
+      padding-right: $spacer8;
+    }
+  }
+
+  // If mat form field is disabled
+  &.mat-form-field-disabled {
+    input:hover {
+      cursor: not-allowed;
+    }
+
+    .mat-form-field-flex {
+      border-color: transparent;
+      background-color: $grey-lighten-3;
+      color: $text-grey-secondary;
+    }
+  }
+
+  &.single-border {
+    .mat-form-field-flex {
+      border: none;
+      border-bottom: 1px solid $grey-lighten-2;
+      border-radius: 0;
+    }
+
+    .mat-input-element {
+      padding: 9px $spacer8 9px 0;
+    }
+
+    &.mat-form-field .mat-form-field-label {
+      padding-left: 0;
+    }
+
+    // Change error background and border on focus
+    &:focus, &.mat-focused {
+      .mat-form-field-flex {
+        border-color: $blue;
+        box-shadow: none;
+      }
+
+      &.mat-form-field-invalid .mat-form-field-flex {
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+
+    // ERROR state styling when not hovered or focused
+    &.mat-form-field-invalid .mat-form-field-flex {
+      border-bottom-color: $red;
+    }
+  }
+
+  &.transparent-form {
+    .mat-form-field-flex {
+      border: 1px solid transparent !important;
+    }
+    .mat-form-field-wrapper {
+      background: transparent;
+
+      &:hover, &:focus, &.mat-focused {
+        background: $text-white-primary;
+
+        .mat-form-field-flex {
+          border: 1px solid $grey-lighten-2 !important;
+        }
+      }
+    }
+  }
+}

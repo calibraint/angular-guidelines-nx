@@ -1,0 +1,21 @@
+@import "../settings/variables";
+
+/* Mat form field Textarea style overwrite here */
+
+mat-form-field.mat-form-field-type-mat-input.textarea {
+
+  .mat-form-field-infix {
+    padding: 0;
+
+    textarea {
+      box-shadow: none;
+      min-height: 60px;
+      line-height: 1.4;
+      padding: $spacer8;
+
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
